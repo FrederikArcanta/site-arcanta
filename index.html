@@ -190,6 +190,10 @@
     .product-header p { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; margin-top: 1rem; max-width: 720px; }
 
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .features-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .features-grid-4 .feature-card { padding: 1.25rem 1rem; }
+    .features-grid-4 .feature-card h3 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .features-grid-4 .feature-card p { font-size: 0.8rem; line-height: 1.5; }
     .feature-card {
       background: var(--white); border-radius: var(--radius); padding: 2.25rem 2rem;
       border: 1px solid rgba(71, 94, 123, 0.06); transition: all 0.3s; position: relative; overflow: hidden;
@@ -492,6 +496,7 @@
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .features-grid { grid-template-columns: 1fr 1fr; }
+      .features-grid-4 { grid-template-columns: 1fr 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .benefits-grid { grid-template-columns: 1fr; }
       .together-grid { grid-template-columns: 1fr; }
@@ -502,7 +507,7 @@
       .use-cases-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
-      .features-grid { grid-template-columns: 1fr; }
+      .features-grid, .features-grid-4 { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .mobile-toggle { display: block; }
       section { padding: 4rem 1.25rem; }
@@ -1026,7 +1031,7 @@
         <p class="fade-up" data-i18n="mira_desc">MIRA lives as a chatbubble inside your Arcanta dashboard. Ask questions about your data, get explanations of trends, or request recommendations — all in context. Behind the scenes, a team of specialised AI agents covers everything from menu engineering to contract analysis, each trained on deep catering sector expertise.</p>
       </div>
 
-      <div class="feature-grid fade-up">
+      <div class="features-grid-4 fade-up">
         <div class="feature-card">
           <div class="feature-icon" style="font-size:1.5rem;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
@@ -1069,10 +1074,10 @@
       <div class="product-header">
         <span class="section-label fade-up" style="color: var(--primary);">Vox</span>
         <h2 class="section-title fade-up" data-i18n="vox_title">Measure guest satisfaction at the point of experience</h2>
-        <p class="fade-up" data-i18n="vox_desc">Vox captures guest feedback through QR-based surveys placed on tables, counters or posters. Quick surveys take less than 15 seconds. The Satisfaction Index gives you a single number to track and compare across outlets — inspired by the simplicity of HappyOrNot, with the depth of a full survey platform.</p>
+        <p class="fade-up" data-i18n="vox_desc">Vox captures guest feedback through QR-based surveys placed on tables, counters or posters. Quick surveys take less than 15 seconds. The Satisfaction Index gives you a single number to track and compare across outlets.</p>
       </div>
 
-      <div class="feature-grid fade-up">
+      <div class="features-grid-4 fade-up">
         <div class="feature-card">
           <div class="feature-icon" style="font-size:1.5rem;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
