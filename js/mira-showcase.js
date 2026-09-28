@@ -298,6 +298,7 @@ export function mountMiraShowcase(root) {
     index = 0;
     entered = true;
     paint();
+    controller.sync();
   });
   langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
 
