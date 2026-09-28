@@ -6,7 +6,7 @@
   <title>Arcanta & Caterpulse — Catering Analytics for Facility Managers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -491,6 +491,159 @@
     @keyframes float-gentle {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-8px); }
+    }
+
+    /* MIRA CHATBUBBLE SHOWCASE (marketing, not live) */
+    .mira-showcase-band {
+      background: #F7F4EF;
+      border: 1px solid #e2e6ec;
+      border-radius: 36px;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      padding: 28px 20px 22px;
+      font-family: Inter, Lato, system-ui, sans-serif;
+    }
+    .mira-phone {
+      background: #FFFFFF;
+      border: 1px solid #e2e6ec;
+      border-radius: 32px;
+      max-width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      box-shadow: 0 22px 48px -36px rgba(27, 46, 74, 0.45);
+      outline: none;
+    }
+    .mira-phone:focus-visible {
+      box-shadow: 0 0 0 3px rgba(196, 138, 63, 0.45);
+    }
+    .mira-head {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 20px;
+      border-bottom: 1px solid #e2e6ec;
+    }
+    .mira-mark { display: block; flex-shrink: 0; }
+    .mira-word {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.92rem;
+      color: #1B2E4A;
+      background: none;
+    }
+    .mira-chip {
+      border: 1px solid rgba(196, 138, 63, 0.55);
+      color: #c48a3f;
+      background: transparent;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+    .mira-body {
+      min-height: 248px;
+      padding: 20px;
+    }
+    .mira-pair { display: flex; flex-direction: column; gap: 18px; }
+    .mira-showcase-band .bub {
+      max-width: 86%;
+      padding: 13px 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .mira-showcase-band .bub.q {
+      margin-left: auto;
+      background: #1B2E4A;
+      color: #FFFFFF;
+      font-size: 15px;
+      border-radius: 14px;
+      border-bottom-right-radius: 5px;
+    }
+    .mira-showcase-band .bub.a {
+      margin-right: auto;
+      background: #f4f7fb;
+      border: 1px solid #e2e6ec;
+      color: #0e1726;
+      font-size: 16px;
+      border-radius: 14px;
+      border-bottom-left-radius: 5px;
+    }
+    .mira-showcase-band .bub.a p { margin: 0; }
+    .mira-key { font-weight: 700; color: #1B2E4A; }
+    .mira-highlight { color: #c48a3f; }
+    .mini-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .mini-stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1B2E4A;
+      line-height: 1.2;
+    }
+    .mini-stat-label {
+      font-size: 0.74rem;
+      color: #6E7884;
+      letter-spacing: 0.01em;
+      margin-top: 2px;
+    }
+    .mira-input {
+      padding: 0 20px 20px;
+      pointer-events: none;
+    }
+    .mira-input-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f1f1f5;
+      border-radius: 999px;
+      padding: 8px 8px 8px 16px;
+    }
+    .mira-input-text {
+      flex: 1;
+      color: #6E7884;
+      font-size: 0.92rem;
+    }
+    .mira-send {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: #1B2E4A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mira-showcase-cta {
+      margin: 18px 0 0;
+      text-align: center;
+    }
+    .mira-showcase-cta a {
+      color: #1B2E4A;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .mira-showcase-cta a:hover { text-decoration: underline; }
+    [data-mira-body][data-enter="animate"] .mira-pair {
+      animation: mira-slide 280ms ease;
+    }
+    @keyframes mira-slide {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes mira-fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-mira-body][data-enter="animate"] .mira-pair {
+        animation: mira-fade 120ms linear;
+      }
     }
 
     /* RESPONSIVE */
@@ -1029,6 +1182,57 @@
         <div class="hero-badge" style="background: rgba(71,94,123,0.12); border-color: rgba(71,94,123,0.25); color: var(--primary); margin-bottom: 1rem; font-size: 0.8rem;" data-i18n="mira_badge">AI-Driven — Integrated Chatbubble</div>
         <h2 class="section-title fade-up" data-i18n="mira_title">Your AI catering assistant, right in the dashboard</h2>
         <p class="fade-up" data-i18n="mira_desc">MIRA lives as a chatbubble inside your Arcanta dashboard. Ask questions about your data, get explanations of trends, or request recommendations — all in context. Behind the scenes, a team of specialised AI agents covers everything from menu engineering to contract analysis, each trained on deep catering sector expertise.</p>
+      </div>
+
+      <!-- Marketing showcase only. Q&A lock: js/mira-showcase.js (Arcanta door, 2026-09-14). Not a live Mira API. -->
+      <div class="mira-showcase-band fade-up">
+        <div
+          class="mira-phone"
+          data-mira-showcase
+          data-paused="false"
+          tabindex="0"
+          role="region"
+          aria-label="MIRA quick answers. Rotation pauses while this card is hovered or focused."
+        >
+          <header class="mira-head">
+            <svg class="mira-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32" fill="none" aria-hidden="true">
+              <rect width="36" height="36" rx="10" fill="#1B2E4A"/>
+              <g transform="translate(8 8) scale(0.8333)" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="7.4"/>
+                <circle cx="12" cy="12" r="3.9"/>
+                <circle cx="12" cy="12" r="1.5" fill="#fff" stroke="none"/>
+              </g>
+              <circle cx="28.5" cy="7.5" r="3.2" fill="#C48A3F"/>
+            </svg>
+            <span class="mira-word">MIRA</span>
+            <span class="mira-chip">QUICK</span>
+          </header>
+          <div class="mira-body" data-mira-body aria-live="polite">
+            <div class="mira-pair">
+              <p class="bub q">Indexation lifts food ~+2.6% — what should selling prices do?</p>
+              <div class="bub a">
+                <p>To stay budget-neutral, selling prices need ~<strong class="mira-key mira-highlight">+4.9%</strong> — not the average of food, staff and management.</p>
+                <div class="mini-stats">
+                  <div class="mini-stat"><div class="mini-stat-value">+2.6%</div><div class="mini-stat-label">Food index</div></div>
+                  <div class="mini-stat"><div class="mini-stat-value">+4.9%</div><div class="mini-stat-label">Sell price</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mira-input" aria-hidden="true">
+            <div class="mira-input-bar">
+              <span class="mira-input-text" data-i18n="mira_ask">Ask a question…</span>
+              <span class="mira-send">
+                <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="#FFFFFF" aria-hidden="true">
+                  <path d="M4 10h10M10 5l5 5-5 5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <p class="mira-showcase-cta">
+          <a href="#contact" data-i18n="mira_demo_cta">Questions about your numbers? Book a demo →</a>
+        </p>
       </div>
 
       <div class="features-grid-4 fade-up">
@@ -1571,6 +1775,8 @@
         mira_f3_title: "Kennisbank", mira_f3_desc: "Gevoed door onze interne documentenbibliotheek \u2014 regelgeving, contractsjablonen, benchmarks \u2014 put MIRA uit geverifieerde sectorkennis voor elk antwoord.",
         mira_f4_title: "Mobiele app", mira_f4_desc: "Beschikbaar als iOS-app voor consultants onderweg \u2014 dezelfde expertise in uw binnenzak tijdens terreinbezoeken, audits en klantgesprekken.",
         mira_note: "MIRA is een intern instrument dat door ons consultingteam wordt gebruikt om de dienstverlening te verbeteren. Het is geen zelfstandig product.",
+        mira_ask: "Stel een vraag…",
+        mira_demo_cta: "Vragen over úw cijfers? Plan een demo →",
         tog_label: "Beter samen", tog_title: "Drie tools, \u00e9\u00e9n compleet beeld",
         tog_desc: "Arcanta, Caterpulse en MIRA zijn ontworpen om samen te werken. Arcanta levert de data, Caterpulse voegt real-time bezetting toe en MIRA biedt AI-gedreven analyse en advies \u2014 zodat onze consultants en uw facilityteam een compleet, actionable beeld krijgen van uw cateringoperatie.",
         tog_cp_desc: "Meet bezetting in real time. Toont live status aan medewerkers en facility managers. Helpt gastverkeer te spreiden en drukte te verminderen.",
@@ -1644,6 +1850,8 @@
         mira_f3_title: "Base de connaissances", mira_f3_desc: "Aliment\u00e9 par notre biblioth\u00e8que de documents internes \u2014 r\u00e9glementations, mod\u00e8les de contrats, benchmarks \u2014 MIRA puise dans des connaissances sectorielles v\u00e9rifi\u00e9es.",
         mira_f4_title: "Application mobile", mira_f4_desc: "Disponible en application iOS pour les consultants en d\u00e9placement \u2014 la m\u00eame expertise dans votre poche lors des visites de terrain et audits.",
         mira_note: "MIRA est un outil interne utilis\u00e9 par notre \u00e9quipe de conseil pour am\u00e9liorer la qualit\u00e9 de service. Ce n\u2019est pas un produit autonome.",
+        mira_ask: "Posez une question…",
+        mira_demo_cta: "Des questions sur vos chiffres ? Planifier une d\u00e9mo →",
         tog_label: "Mieux ensemble", tog_title: "Trois outils, une image compl\u00e8te",
         tog_desc: "Arcanta, Caterpulse et MIRA sont con\u00e7us pour fonctionner ensemble. Arcanta fournit les donn\u00e9es, Caterpulse ajoute l\u2019occupation en temps r\u00e9el et MIRA offre une analyse et des conseils aliment\u00e9s par l\u2019IA \u2014 donnant \u00e0 nos consultants et \u00e0 votre \u00e9quipe facility une image compl\u00e8te et actionnable de votre op\u00e9ration de restauration.",
         tog_cp_desc: "Mesure l\u2019occupation en temps r\u00e9el. Affiche le statut en direct aux collaborateurs et facility managers. Aide \u00e0 r\u00e9partir le trafic des convives et r\u00e9duire la congestion.",
@@ -1696,5 +1904,6 @@
       });
     }
   </script>
+  <script type="module" src="js/mira-showcase.js"></script>
 </body>
 </html>
